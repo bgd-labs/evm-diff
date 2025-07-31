@@ -137,6 +137,8 @@ function selectRpcUrls(rpcUrls: string[]): string[] {
 		'cloudflare', // Requested resource not found.
 		'api.avax.network', // Unrecognized token '<', 429's easily.
 		'rpc.linea.build', // All error messages are identical so can't distinguish opcode support.
+		'https://rpc.ankr.com/',
+		'https://api.securerpc.com/v1', // internal server error
 	];
 	const filteredRpcUrls = rpcUrls.filter(
 		(url) => !domainsToSkip.some((domain) => url.includes(domain)),
