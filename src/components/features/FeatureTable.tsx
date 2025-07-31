@@ -158,7 +158,7 @@ const OpcodesTable = ({ featureData }: { featureData: Record<string, Opcodes> })
 						key={op}
 						className={trClasses}
 						ref={(el) => {
-							opcodeRefs.current[knownOpcodes[op]] = el;
+							opcodeRefs.current[knownOpcodes[op].name] = el;
 						}}
 					>
 						<td className={classNames(td1Classes, 'text-center')}>
@@ -166,7 +166,7 @@ const OpcodesTable = ({ featureData }: { featureData: Record<string, Opcodes> })
 								<Copyable
 									content={
 										<div>
-											{knownOpcodes[op]}
+											{knownOpcodes[op].name}
 											<div className="text-secondary text-sm">{toUppercaseHex(op)}</div>
 										</div>
 									}

@@ -43,7 +43,7 @@ export const DiffOpcodes = ({ base, target, onlyShowDiff }: Props): JSX.Element 
 						className="grid grid-cols-12 items-center border-b border-zinc-500/10 py-2 dark:border-zinc-500/20"
 					>
 						<div className="col-span-2">
-							<Copyable content={knownOpcodes[number].toLocaleUpperCase()} />
+							<Copyable content={knownOpcodes[number].name.toLocaleUpperCase()} />
 							<Copyable content={toUppercaseHex(number)} className="text-secondary text-sm" />
 						</div>
 						<div className="col-span-5 pr-4">
